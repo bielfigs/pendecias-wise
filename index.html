@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidade Wise Imob - Gestão de Pendências</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wise-green: #22c55e;
+            --wise-bg-gray: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        .urbanist {
+            font-family: 'Urbanist', sans-serif;
+        }
+
+        /* Cores Características Wise Imob */
+        .brand-green { color: var(--wise-green); }
+        .bg-brand-green { background-color: var(--wise-green); }
+        .brand-orange { color: #f59e0b; }
+        .bg-brand-orange { background-color: #f59e0b; }
+        .bg-section-green { background-color: var(--wise-green); }
+
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Estilos dos Social Cards Responsivos */
+        .social-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 280px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            border-color: var(--wise-green);
+        }
+
+        .social-card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .social-card i {
+                font-size: 50px;
+            }
+        }
+
+        .social-name {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .social-handle {
+            font-family: 'Urbanist', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .slide-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+
+        .slide-title {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .slide-title {
+                font-size: 32px;
+            }
+            .slide-header {
+                gap: 15px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .slide-title .green {
+            color: var(--wise-green);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegação com Logo PNG -->
+    <nav class="sticky-nav border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 md:py-4 flex justify-center md:justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo-horizontal-colorido.png" alt="Logo Wise Imob" class="h-7 md:h-10 w-auto" onerror="this.src='https://via.placeholder.com/150x50?text=Wise+Imob'">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-12 md:py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-green-100 text-green-700 text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Nova Atualização</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 md:mb-6 leading-tight urbanist">
+                Gestão de <span class="brand-green">Pendências</span>
+            </h1>
+            <p class="text-base md:text-lg text-slate-600 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
+                Centralize o controle de documentos e acelere as análises de crédito dos seus negócios com um novo fluxo de trabalho otimizado.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 pb-16 md:pb-24 space-y-16 md:space-y-24">
+
+        <!-- Seção: Menu Lateral -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="text-center md:text-left">
+                <div class="bg-brand-green w-12 h-12 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-green-200 mx-auto md:mx-0">
+                    <i class="fas fa-list-check text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 urbanist">Acesso rápido e direto</h2>
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+                    Adicionamos a funcionalidade <strong>Pendências</strong> na plataforma para que você tenha visibilidade imediata da documentação que está faltando nos processos de financiamento e análises de crédito.
+                </p>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-green-300 to-emerald-300 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div class="relative bg-white p-3 md:p-4 rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="flex items-center justify-center bg-slate-50 p-6 md:p-8 rounded-lg min-h-[160px] md:min-h-[200px]">
+                         <div class="bg-brand-green p-3 md:p-4 rounded-lg flex items-center space-x-3 md:space-x-4 text-white shadow-lg">
+                            <i class="fas fa-flag text-sm md:text-base"></i>
+                            <span class="font-bold text-lg md:text-xl urbanist">Pendências</span>
+                         </div>
+                    </div>
+            </div>
+        </section>
+
+           <!-- Seção: Dashboard -->
+        <section class="space-y-8 md:space-y-12">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 urbanist">Painel Geral de Pendências</h2>
+                <p class="text-sm md:text-slate-600">Desenvolvido para oferecer visibilidade total e controle sobre o fluxo de documentos.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl md:rounded-3xl p-2 md:p-4 card-shadow overflow-hidden">
+                <div class="relative w-full h-auto min-h-[200px] flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden">
+                    <!-- src pronto para o print; h-auto garante que não corta -->
+                    <img src="WhatsApp Image 2026-04-07 at 15.49.01.jpeg" alt="Painel Geral de Pendências" class="w-full h-auto block shadow-sm" onerror="this.parentElement.querySelector('.placeholder-content').classList.remove('hidden'); this.classList.add('hidden');">
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8 md:mt-12 max-w-4xl mx-auto">
+                    <div class="text-center space-y-3 md:space-y-4 px-4">
+                        <div class="brand-green text-4xl md:text-5xl mb-2">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3 class="font-bold text-lg md:text-xl urbanist">Filtros Inteligentes</h3>
+                        <p class="text-sm md:text-base text-slate-500">Busque por status, tipo, criador ou destinatário em segundos.</p>
+                    </div>
+                    <div class="text-center space-y-3 md:space-y-4 px-4">
+                        <div class="brand-orange text-4xl md:text-5xl mb-2">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3 class="font-bold text-lg md:text-xl urbanist">Status Visuais</h3>
+                        <p class="text-sm md:text-base text-slate-500">Identificação rápida com cores: Aberta (vermelho) ou Resolvida (verde).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Modal de Detalhes -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 items-center bg-section-green rounded-[2rem] md:rounded-[3rem] p-6 md:p-16 text-white shadow-2xl shadow-green-500/20">
+            <div class="order-2 lg:order-1">
+                <div class="relative bg-white rounded-2xl p-4 md:p-6 text-slate-900 shadow-2xl">
+                    <div class="flex justify-between items-center mb-4 md:mb-6 border-b pb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-green-50 p-2 rounded-lg">
+                                <i class="fas fa-flag brand-green text-lg md:text-xl"></i>
+                            </div>
+                            <div class="min-w-0">
+                                <h4 class="font-bold text-base md:text-lg leading-tight truncate">Documento Faltante</h4>
+                                <span class="text-[9px] md:text-[10px] text-slate-500 font-semibold uppercase tracking-tight block truncate">Oportunidade - Antonia Alves</span>
+                            </div>
+                        </div>
+                        <span class="bg-red-500 text-white text-[8px] md:text-[10px] font-bold px-2 md:px-3 py-1 rounded-full shadow-sm shrink-0">ABERTA</span>
+                    </div>
+                    
+                    <div class="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                        <div class="bg-slate-50 p-3 rounded-xl flex items-center justify-between border border-slate-100">
+                            <div class="flex items-center space-x-3 min-w-0">
+                                <i class="fas fa-file-lines text-slate-400 shrink-0"></i>
+                                <span class="text-xs md:text-sm font-medium truncate">Certidão da Junta Comercial</span>
+                            </div>
+                            <span class="text-[8px] bg-slate-200 px-1.5 py-0.5 rounded uppercase font-bold text-slate-500 tracking-tighter shrink-0">Empresa</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-2 md:gap-3">
+                        <button class="w-full sm:flex-1 border border-slate-200 py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-semibold hover:bg-slate-50 transition text-slate-600 order-2 sm:order-1">Fechar</button>
+                        <button class="w-full sm:flex-[1.5] bg-brand-orange text-white py-2.5 md:py-3 rounded-xl text-xs md:text-sm font-bold flex items-center justify-center space-x-2 hover:brightness-110 transition shadow-lg shadow-orange-500/20 order-1 sm:order-2">
+                            <i class="fas fa-bell"></i>
+                            <span>Cobrar</span>
+                        </button>
+                    </div>
+                    <div class="mt-4 text-center text-[8px] md:text-[10px] text-slate-400 italic font-medium">[Simulação do Modal de Detalhe Wise Imob]</div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-sm urbanist">Detalhamento e Cobrança</h2>
+                <div class="space-y-6">
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4">
+                        <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fas fa-search-plus text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-white urbanist">Contexto Total</h4>
+                            <p class="text-green-50 text-sm md:text-base opacity-90">Saiba exatamente quem criou, para quem foi enviada e de qual negócio se trata.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center md:items-start space-y-3 md:space-y-0 md:space-x-4">
+                        <div class="bg-white/20 w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+                            <i class="fas fa-bolt text-brand-orange"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-white urbanist">Ação de Cobrança</h4>
+                            <p class="text-green-50 text-sm md:text-base opacity-90">Agilize a entrega. Envie um lembrete imediato ao responsável com apenas um toque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Benefícios -->
+        <section class="py-8 md:py-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-12 text-center urbanist">Como isso melhora o seu dia a dia</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:border-green-200 transition text-center sm:text-left">
+                    <i class="fas fa-bullseye brand-green text-2xl mb-4"></i>
+                    <h4 class="font-bold mb-2 urbanist">Centralização</h4>
+                    <p class="text-sm text-slate-500">Esqueça documentos perdidos em e-mails ou conversas de WhatsApp.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:border-green-200 transition text-center sm:text-left">
+                    <i class="fas fa-eye brand-green text-2xl mb-4"></i>
+                    <h4 class="font-bold mb-2 urbanist">Transparência</h4>
+                    <p class="text-sm text-slate-500">Todos sabem exatamente o que falta para o processo avançar.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:border-green-200 transition text-center sm:text-left">
+                    <i class="fas fa-gauge-high brand-green text-2xl mb-4"></i>
+                    <h4 class="font-bold mb-2 urbanist">Velocidade</h4>
+                    <p class="text-sm text-slate-500">Redução drástica de gargalos em análises de crédito e financiamentos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow hover:border-green-200 transition text-center sm:text-left">
+                    <i class="fas fa-clock-rotate-left brand-green text-2xl mb-4"></i>
+                    <h4 class="font-bold mb-2 urbanist">Histórico</h4>
+                    <p class="text-sm text-slate-500">Rastreabilidade completa de quando cada pendência foi resolvida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Redes Sociais (Slide 11) -->
+        <section class="py-8 md:py-12">
+            <div class="slide-header">
+                <i class="fa-solid fa-hashtag" style="color: var(--wise-green); font-size: 24px;"></i>
+                <h2 class="slide-title">Conecte-se: <span class="green">Siga a Wise Imob</span></h2>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center gap-8 md:gap-12 py-10 md:py-12 px-4 md:px-6 rounded-[2rem] md:rounded-[2.5rem] bg-slate-50 border border-slate-200">
+                <div class="text-center max-w-[900px]">
+                    <h3 class="urbanist text-2xl md:text-3xl font-bold mb-4">Fique por dentro de todas as novidades!</h3>
+                    <p class="text-base md:text-xl text-slate-500 leading-relaxed">
+                        Acompanhe nossos canais oficiais para receber dicas, atualizações e muito conteúdo de valor.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row flex-wrap gap-6 md:gap-8 w-full justify-center items-center">
+                    <!-- Instagram (Verde Wise) -->
+                    <a href="https://www.instagram.com/wise.imob/" target="_blank" class="social-card">
+                        <i class="fa-brands fa-instagram" style="color: var(--wise-green);"></i>
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@wise.imob</span>
+                    </a>
+
+                    <!-- YouTube (Verde Wise) -->
+                    <a href="https://www.youtube.com/@wiseimob" target="_blank" class="social-card">
+                        <i class="fa-brands fa-youtube" style="color: var(--wise-green);"></i>
+                        <span class="social-name">YouTube</span>
+                        <span class="social-handle">Wise Imob</span>
+                    </a>
+
+                    <!-- Site (Logo PNG) -->
+                    <a href="https://www.wiseimob.com.br/" target="_blank" class="social-card">
+                        <div class="h-[50px] md:h-[65px] flex items-center mb-[15px]">
+                            <img src="icone-colorido.png" alt="Logo Wise Imob" class="h-full w-auto object-contain" onerror="this.src='https://via.placeholder.com/65x65?text=Wise'">
+                        </div>
+                        <span class="social-name">Nosso Site</span>
+                        <span class="social-handle">wiseimob.com.br</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="gradient-bg py-16 md:py-20 px-4 text-center text-white rounded-t-[2.5rem] md:rounded-t-[4rem]">
+        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white drop-shadow-md urbanist">Pronto para organizar o seu fluxo?</h2>
+        <p class="mb-8 md:mb-10 text-green-50 text-sm md:text-base max-w-xl mx-auto opacity-90">Explore a nova aba de Pendências hoje mesmo e eleve o nível de produtividade da sua imobiliária.</p>
+        <div class="mt-12 md:mt-16 pt-8 border-t border-white/20 text-[10px] md:text-sm text-green-100">
+            <p>&copy; 2026 Wise Imob. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
